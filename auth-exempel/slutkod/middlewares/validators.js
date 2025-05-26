@@ -1,6 +1,5 @@
 export function validateAuthBody(req, res, next) {
     if(req.body) {
-
         const { username, password } = req.body;
         if(username && password) {
             next();
