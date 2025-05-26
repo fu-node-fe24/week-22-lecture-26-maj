@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 
 import authRouter from './routes/auth.js';
 import itemsRouter from './routes/items.js';
-
+import cartRouter from './routes/cart.js';
 
 // Config
 dotenv.config();
@@ -19,6 +19,7 @@ app.use(express.json());
 // Routes
 app.use('/api/auth', authRouter);
 app.use('/api/items', itemsRouter);
+app.use('/api/cart', cartRouter);
 
 database.on('error', (error) => console.log(error));
 database.once('connected', () => {
